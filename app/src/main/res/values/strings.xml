@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Projeto_ecommerce</string>
+
+    <!-- Adicione este array -->
+    <string-array name="tipos_usuario">
+        <item>Cliente</item>
+        <item>Vendedor</item>
+    </string-array>
+</resources>

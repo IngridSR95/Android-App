@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".CadastroActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#942c44"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Cadastro"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Campos de Cadastro -->
+            <EditText
+                android:id="@+id/editTextNomeCompleto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Nome Completo"
+                android:inputType="textPersonName"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextCpfCnpj"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="CPF/CNPJ"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/editTextNomeCompleto"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextDataNascimento"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Data de Nascimento (DD/MM/AAAA)"
+                android:inputType="date"
+                app:layout_constraintTop_toBottomOf="@id/editTextCpfCnpj"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextCep"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="CEP"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@id/editTextDataNascimento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Estado"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/editTextCep"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextCidade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Cidade"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/editTextEstado"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextBairro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Bairro"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/editTextCidade"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextRua"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Rua"
+                android:inputType="text"
+                app:layout_constraintTop_toBottomOf="@id/editTextBairro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextEmailCadastro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                app:layout_constraintTop_toBottomOf="@id/editTextRua"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/editTextSenhaCadastro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                app:layout_constraintTop_toBottomOf="@id/editTextEmailCadastro"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/labelTipoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tipo de Usuário:"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/editTextSenhaCadastro"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoUsuario"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                app:layout_constraintTop_toBottomOf="@id/labelTipoUsuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"/>
+
+            <Button
+                android:id="@+id/buttonCadastrar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cadastrar"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/spinnerTipoUsuario"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
