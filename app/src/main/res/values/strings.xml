@@ -6,4 +6,12 @@
         <item>Cliente</item>
         <item>Vendedor</item>
     </string-array>
+    <string name="login_area">Área de login</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="no_account_register">Não possui login? Cadastre-se aqui</string>
+    <string name="entrar">Entrar</string>
+    <string name="cd_email">Campo email</string>
+    <string name="cd_password">Campo senha</string>
+
 </resources>

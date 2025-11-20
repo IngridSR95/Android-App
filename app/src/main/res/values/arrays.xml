@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Lista de nomes dos drawables usados como imagens de produtos -->
+    <string-array name="lista_imagens_produto">
+        <item>cookie_tradicional</item>
+        <item>recheado</item>
+        <item>redvelvet</item>
+        <item>brownie</item>
+        <item>pedaco_brownie</item>
+        <item>tradicional</item>
+    </string-array>
+
+</resources>

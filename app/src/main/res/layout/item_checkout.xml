@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_checkout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:background="@color/primary_color">
+
+    <!-- Título do produto -->
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Nome do produto"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/on_primary"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/controlsLayout"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="8dp" />
+
+    <!-- Preço (embaixo do título) -->
+    <TextView
+        android:id="@+id/tvPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="R$ 0,00"
+        android:textSize="14sp"
+        android:textColor="@color/on_primary"
+        app:layout_constraintStart_toStartOf="@id/tvTitulo"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo"
+        android:layout_marginTop="6dp" />
+
+    <!-- Controles de quantidade + remover (alinhados à direita) -->
+    <LinearLayout
+        android:id="@+id/controlsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Botão diminuir -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMinus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Diminuir quantidade"
+            android:text="-"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="@color/on_primary"
+            android:textColor="@color/primary_color"
+            app:iconPadding="0dp"
+            app:iconTint="@color/primary_color"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Quantidade -->
+        <TextView
+            android:id="@+id/tvQuantidade"
+            android:layout_width="44dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="1"
+            android:textSize="14sp"
+            android:textColor="@color/on_primary"
+            android:background="@drawable/ic_quantidade"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Botão aumentar -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPlus"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Aumentar quantidade"
+            android:text="+"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:backgroundTint="@color/on_primary"
+            android:textColor="@color/primary_color"
+            app:iconPadding="0dp"
+            app:iconTint="@color/primary_color"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Botão remover -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRemover"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Remover"
+            android:textAllCaps="false"
+            android:backgroundTint="#B00020"
+            android:textColor="@android:color/white"
+            android:contentDescription="Remover item do carrinho" />
+    </LinearLayout>
+
+    <!-- Divider pra dar espaçamento visual -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvPreco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

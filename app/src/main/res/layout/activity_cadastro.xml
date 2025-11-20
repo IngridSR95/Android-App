@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    tools:context=".CadastroActivity">
+    tools:context=".ui.CadastroActivity">
 
-    <!-- Cabeçalho (sem alterações) -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/header"
         android:layout_width="0dp"
@@ -41,9 +41,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="24dp"> <!-- Aumentei o padding para mais respiro -->
+            android:padding="24dp">
 
-            <!-- INÍCIO DAS ALTERAÇÕES VISUAIS -->
+
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/inputLayoutNomeCompleto"

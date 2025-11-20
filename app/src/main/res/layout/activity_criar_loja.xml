@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCriarLoja"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_color">
+
+    <LinearLayout
+        android:id="@+id/containerCriarLoja"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvTituloCriarLoja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar Loja"
+            android:textColor="@color/on_primary"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- IMAGEM DA LOJA -->
+        <ImageView
+            android:id="@+id/imgLoja"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:padding="6dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_loja"
+            android:layout_marginBottom="12dp" />
+
+        <!-- BOTÃO ESCOLHER IMAGEM -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEscolherImagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Escolher Imagem"
+            android:textAllCaps="false"
+            app:icon="@drawable/ic_add"
+            app:iconGravity="textStart"
+            android:layout_marginBottom="16dp" />
+
+        <!-- NOME DA LOJA -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutNomeLoja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="filled"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etNomeLoja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome da loja"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- DESCRIÇÃO -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layoutDescricaoLoja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="filled"
+            android:layout_marginBottom="12dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescricaoLoja"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minLines="3"
+                android:hint="Descrição da loja"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- PROGRESSBAR -->
+        <ProgressBar
+            android:id="@+id/progressUpload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- BOTÃO SALVAR LOJA -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSalvarLoja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Loja"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/on_primary"
+            android:textColor="@color/primary_color" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
